@@ -27,16 +27,46 @@
             border: ٢px solid #ffb6c1;
         }
 
-        h1 {
-            color: #c2185b;
-            font-size: ٣٢px;
-            margin: ١٠px ٠ ٢٠px;
-            font-family: "Reem Kufi", sans-serif;
+        .name-container {
+            margin: ٢٠px ٠;
+            position: relative;
+            display: inline-block;
         }
 
-        .heart {
-            font-size: ٤٠px;
-            margin: ٠ ٨px;
+        .majd-name {
+            color: #c2185b;
+            font-size: ٤٥px;
+            font-family: "Reem Kufi", sans-serif;
+            cursor: pointer;
+            transition: all ٠٫٤s;
+            text-shadow: ٠ ٠ ١٠px rgba(194, 24, 91, 0.3);
+            padding: ١٠px ٢٠px;
+            border-radius: ٢٠px;
+        }
+
+        .majd-name:hover {
+            transform: scale(1.05);
+            text-shadow: ٠ ٠ ٢٠px rgba(194, 24, 91, 0.6);
+        }
+
+        .sparkle {
+            position: absolute;
+            font-size: ٣٠px;
+            color: gold;
+            opacity: ٠;
+            pointer-events: none;
+            animation: sparkleAnim ١٫٢s forwards;
+        }
+
+        @keyframes sparkleAnim {
+            ٠٪ { opacity: ١; transform: translate(٠, ٠) scale(0.5); }
+            ٥٠٪ { opacity: ١; transform: translate(٢٠px, -٣٠px) scale(1.2); }
+            ١٠٠٪ { opacity: ٠; transform: translate(٤٠px, -٦٠px) scale(1.5); }
+        }
+
+        h2 {
+            font-size: ٢٨px;
+            margin: ١٠px ٠;
         }
 
         p {
@@ -82,18 +112,6 @@
             padding: ١٠px;
             box-shadow: ٠ ١٠px ٢٥px rgba(255, 105, 180, 0.4);
             transition: all ٠٫٣s;
-            overflow: hidden;
-        }
-
-        .heart-btn::before {
-            content: "❤️";
-            position: absolute;
-            font-size: ٦٠px;
-            opacity: ٠٫٢;
-            top: ٥٠٪;
-            left: ٥٠٪;
-            transform: translate(-٥٠٪, -٥٠٪);
-            z-index: ٠;
         }
 
         .heart-btn:hover {
@@ -102,14 +120,12 @@
         }
 
         .heart-btn:active {
-            transform: scale(0.95);
             animation: pulse-btn ٠٫٤s;
         }
 
         @keyframes pulse-btn {
-            ٠٪ { transform: scale(1); }
+            ٠٪, ١٠٠٪ { transform: scale(1); }
             ٥٠٪ { transform: scale(1.15); }
-            ١٠٠٪ { transform: scale(1); }
         }
 
         .quote-container {
@@ -135,13 +151,11 @@
         }
 
         @media (max-width: ٦٠٠px) {
-            h1 { font-size: ٢٨px; }
+            .majd-name { font-size: ٣٨px; }
+            h2 { font-size: ٢٤px; }
             p { font-size: ١٨px; }
-            .heart { font-size: ٣٥px; }
             .pdf-container { height: ٦٠vh; min-height: ٣٥٠px; }
-            .quote-container { font-size: ١٦px; padding: ١٥px; }
             .heart-btn { width: ١٢٠px; height: ١٢٠px; font-size: ١٨px; }
-            .heart-btn::before { font-size: ٥٠px; }
         }
     </style>
 </head>
@@ -149,17 +163,17 @@
 <body>
 
     <div class="card">
-        <h1>
-            <span class="heart">❤️</span>
-            إلى زوجتي الغالية مجد
-            <span class="heart">❤️</span>
-        </h1>
+        <div class="name-container">
+            <h2 class="majd-name" id="majd" onclick="sparkleName()">
+                مجد
+            </h2>
+        </div>
 
         <p>
-            أهديك يا مجد كتاب لغات الحب الخمس  
-            لأني رأيت فيه كثيرا من لغات الحب التي بيننا  
-            تفضلي اقرئيه هنا مباشرة  
-            ودعي قلبك يستمع إلى ما يشبه حبنا
+            إلى زوجتي الغالية  
+            أهديك كتاب لغات الحب الخمس  
+            لأن فيه كثير من ما بيننا من مودة ورحمة  
+            تفضلي اقرئيه هنا واستمتعي بكل صفحة
         </p>
 
         <div class="pdf-container">
@@ -179,7 +193,8 @@
         </button>
 
         <div class="note">
-            او اضغطي على القلب الثاني لتحميل الكتاب مباشرة
+            اضغطي على اسمي لتري بريقه  
+            واضغطي القلوب للمزيد من الدفء
         </div>
     </div>
 
@@ -188,18 +203,40 @@
             "الحب ليس أن تنظر بعضكما إلى بعض بل أن تنظرا معا في اتجاه واحد",
             "أنت في قلبي كالروح في الجسد لا تستقر إلا بك",
             "الزواج نصف الدين فاجعله نصف الجنة بحسن المعاشرة",
-            "من رزقه الله زوجة صالحة فقد أعانه على نصف دينه فليتق الله في النصف الآخر",
+            "من رزقه الله زوجة صالحة فقد أعانه على نصف دينه",
             "أجمل ما في الحب أن يصبح الاثنان واحدا دون أن يفقد أحدهما نفسه",
-            "إذا أردت أن تعرف مقدار حبي لك فانظر إلى مقدار سعادتي حين أراك",
-            "الحب الحقيقي هو الذي ينمو مع الزمن ويزداد جمالا بالصبر والتفاهم",
-            "أنت لست مجرد زوجتي أنت بيتي وأماني وسكينتي",
-            "ربنا هب لنا من أزواجنا وذرياتنا قرة أعين واجعلنا للمتقين إماما",
-            "كل يوم معك هو صفحة جديدة من قصة حب لا تنتهي"
+            "إذا أردت أن تعرف مقدار حبي لك فانظر إلى سعادتي حين أراك",
+            "الحب الحقيقي ينمو مع الزمن ويزداد جمالا بالصبر",
+            "أنت بيتي وأماني وسكينتي",
+            "ربنا هب لنا من أزواجنا وذرياتنا قرة أعين",
+            "كل يوم معك صفحة جديدة من قصة حب لا تنتهي"
         ];
 
         function showQuote() {
             const randomIndex = Math.floor(Math.random() * quotes.length);
             document.getElementById("quote").innerText = quotes[randomIndex];
+        }
+
+        function sparkleName() {
+            const name = document.getElementById("majd");
+            name.style.color = '#' + Math.floor(Math.random()*16777215).toString(16); // لون عشوائي دافئ
+            name.style.transform = "scale(1.1)";
+
+            setTimeout(() => {
+                name.style.transform = "scale(1)";
+            }, ٣٠٠);
+
+            // اضافة بريق
+            for (let i = ٠; i < ٥; i++) {
+                const sparkle = document.createElement("div");
+                sparkle.className = "sparkle";
+                sparkle.innerText = "✨";
+                sparkle.style.left = Math.random() * ١٠٠ + "٪";
+                sparkle.style.top = Math.random() * ١٠٠ + "٪";
+                name.parentElement.appendChild(sparkle);
+
+                setTimeout(() => sparkle.remove(), ١٢٠٠);
+            }
         }
     </script>
 
