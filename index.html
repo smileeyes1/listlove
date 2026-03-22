@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>هدية إلى مجد</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;600&family=Tajawal:wght@400;700&display=swap">
+
+    <style>
+        body {
+            margin: ٠;
+            padding: ٠;
+            min-height: ١٠٠vh;
+            background: linear-gradient(to bottom, #fff0f5, #ffe4e9, #ffd1dc);
+            font-family: "Tajawal", sans-serif;
+            color: #٤٤٤;
+            text-align: center;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.94);
+            padding: ٣٠px ١٥px;
+            margin: ٢٠px ١٠px;
+            border-radius: ٢٥px;
+            box-shadow: ٠ ١٠px ٣٠px rgba(255, 105, 180, 0.2);
+            border: ٢px solid #ffb6c1;
+        }
+
+        h1 {
+            color: #c2185b;
+            font-size: ٣٢px;
+            margin: ١٠px ٠ ٢٠px;
+            font-family: "Reem Kufi", sans-serif;
+        }
+
+        .heart {
+            font-size: ٤٠px;
+            margin: ٠ ٨px;
+        }
+
+        p {
+            font-size: ٢٠px;
+            line-height: ١٫٨;
+            margin: ١٥px ٠;
+            color: #٥٥٥;
+        }
+
+        .pdf-container {
+            margin: ٢٥px ٠;
+            border: ٣px solid #ec407a;
+            border-radius: ١٨px;
+            overflow: hidden;
+            height: ٥٥vh;
+            min-height: ٣٨٠px;
+            box-shadow: ٠ ٨px ٢٠px rgba(236, 64, 122, 0.2);
+            background: white;
+        }
+
+        .pdf-container iframe {
+            width: ١٠٠%;
+            height: ١٠٠%;
+            border: none;
+        }
+
+        .quote-container {
+            margin: ٢٥px ٠;
+            padding: ٢٠px;
+            background: rgba(255, 182, 193, 0.15);
+            border-radius: ١٥px;
+            min-height: ٨٠px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: ١٨px;
+            color: #c2185b;
+            line-height: ١٫٦;
+            border: ١px dashed #ffb6c1;
+        }
+
+        .quote-btn {
+            display: inline-block;
+            padding: ١٤px ٣٠px;
+            background: #ec407a;
+            color: white;
+            border: none;
+            border-radius: ٤٠px;
+            font-size: ٢٠px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: ١٥px ٠;
+            box-shadow: ٠ ٦px ١٥px rgba(236, 64, 122, 0.3);
+        }
+
+        .quote-btn:hover {
+            background: #d81b60;
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: ١٦px ٣٥px;
+            background: #d81b60;
+            color: white;
+            border-radius: ٤٠px;
+            text-decoration: none;
+            font-size: ٢٢px;
+            font-weight: bold;
+            margin: ٢٠px ٠;
+            box-shadow: ٠ ٦px ١٥px rgba(216, 27, 96, 0.3);
+        }
+
+        .download-btn:hover {
+            background: #ad1457;
+        }
+
+        .note {
+            font-size: ١٧px;
+            color: #٧٧٧;
+            margin-top: ١٥px;
+            line-height: ١٫٥;
+        }
+
+        @media (max-width: ٦٠٠px) {
+            h1 { font-size: ٢٨px; }
+            p { font-size: ١٨px; }
+            .heart { font-size: ٣٥px; }
+            .pdf-container { height: ٦٠vh; min-height: ٣٥٠px; }
+            .quote-container { font-size: ١٦px; padding: ١٥px; }
+            .quote-btn, .download-btn { font-size: ١٩px; padding: ١٣px ٢٨px; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <h1>
+            <span class="heart">❤️</span>
+            إلى زوجتي الغالية مجد
+            <span class="heart">❤️</span>
+        </h1>
+
+        <p>
+            أهديك يا مجد كتاب لغات الحب الخمس  
+            لأني رأيت فيه كثيرا من لغات الحب التي بيننا  
+            تفضلي اقرئيه هنا مباشرة  
+            ودعي قلبك يستمع إلى ما يشبه حبنا
+        </p>
+
+        <div class="pdf-container">
+            <iframe src="lovebook.pdf"></iframe>
+        </div>
+
+        <button class="quote-btn" onclick="showQuote()">
+            كلمة من قلبي لك
+        </button>
+
+        <div class="quote-container" id="quote">
+            اضغطي الزر لتري كلمة جميلة تهمس لك
+        </div>
+
+        <div class="note">
+            لو ما ظهر الكتاب داخل الإطار بشكل مريح  
+            اضغطي زر التحميل وافتحيه بتطبيق القارئ
+        </div>
+
+        <a href="lovebook.pdf" download class="download-btn">
+            تحميل الكتاب 💝
+        </a>
+    </div>
+
+    <script>
+        const quotes = [
+            "الحب ليس أن تنظر بعضكما إلى بعض بل أن تنظرا معا في اتجاه واحد",
+            "أنت في قلبي كالروح في الجسد لا تستقر إلا بك",
+            "الزواج نصف الدين فاجعله نصف الجنة بحسن المعاشرة",
+            "من رزقه الله زوجة صالحة فقد أعانه على نصف دينه فليتق الله في النصف الآخر",
+            "أجمل ما في الحب أن يصبح الاثنان واحدا دون أن يفقد أحدهما نفسه",
+            "إذا أردت أن تعرف مقدار حبي لك فانظر إلى مقدار سعادتي حين أراك",
+            "الحب الحقيقي هو الذي ينمو مع الزمن ويزداد جمالا بالصبر والتفاهم",
+            "أنت لست مجرد زوجتي أنت بيتي وأماني وسكينتي",
+            "ربنا هب لنا من أزواجنا وذرياتنا قرة أعين واجعلنا للمتقين إماما",
+            "كل يوم معك هو صفحة جديدة من قصة حب لا تنتهي"
+        ];
+
+        function showQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById("quote").innerText = quotes[randomIndex];
+        }
+    </script>
+
+</body>
+</html>
