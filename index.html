@@ -9,135 +9,135 @@
 
     <style>
         body {
-            margin: ٠;
-            padding: ٠;
-            min-height: ١٠٠vh;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
             background: linear-gradient(to bottom, #fff0f5, #ffe4e9, #ffd1dc);
             font-family: "Tajawal", sans-serif;
-            color: #٤٤٤;
+            color: #444;
             text-align: center;
         }
 
         .card {
             background: rgba(255, 255, 255, 0.94);
-            padding: ٣٠px ١٥px;
-            margin: ٢٠px ١٠px;
-            border-radius: ٢٥px;
-            box-shadow: ٠ ١٠px ٣٠px rgba(255, 105, 180, 0.2);
-            border: ٢px solid #ffb6c1;
+            padding: 30px 15px;
+            margin: 20px 10px;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(255, 105, 180, 0.2);
+            border: 2px solid #ffb6c1;
         }
 
         .name-container {
-            margin: ٢٠px ٠;
+            margin: 20px 0;
             position: relative;
             display: inline-block;
         }
 
         .majd-name {
             color: #c2185b;
-            font-size: ٤٥px;
+            font-size: 45px;
             font-family: "Reem Kufi", sans-serif;
             cursor: pointer;
-            transition: all ٠٫٤s;
-            text-shadow: ٠ ٠ ١٠px rgba(194, 24, 91, 0.3);
-            padding: ١٠px ٢٠px;
-            border-radius: ٢٠px;
+            transition: all 0.4s;
+            text-shadow: 0 0 10px rgba(194, 24, 91, 0.3);
+            padding: 10px 20px;
+            border-radius: 20px;
         }
 
         .majd-name:active {
             transform: scale(1.1);
-            text-shadow: ٠ ٠ ٢٠px rgba(194, 24, 91, 0.8);
+            text-shadow: 0 0 20px rgba(194, 24, 91, 0.8);
         }
 
         .sparkle {
             position: absolute;
-            font-size: ٣٠px;
+            font-size: 30px;
             color: gold;
-            opacity: ٠;
+            opacity: 0;
             pointer-events: none;
-            animation: sparkleAnim ١٫٢s forwards;
+            animation: sparkleAnim 1.2s forwards;
         }
 
         @keyframes sparkleAnim {
-            ٠٪ { opacity: ١; transform: translate(٠, ٠) scale(0.5); }
-            ٥٠٪ { opacity: ١; transform: translate(٢٠px, -٣٠px) scale(1.2); }
-            ١٠٠٪ { opacity: ٠; transform: translate(٤٠px, -٦٠px) scale(1.5); }
+            0% { opacity: 1; transform: translate(0, 0) scale(0.5); }
+            50% { opacity: 1; transform: translate(20px, -30px) scale(1.2); }
+            100% { opacity: 0; transform: translate(40px, -60px) scale(1.5); }
         }
 
         p {
-            font-size: ٢٠px;
-            line-height: ١٫٨;
-            margin: ١٥px ٠;
-            color: #٥٥٥;
+            font-size: 20px;
+            line-height: 1.8;
+            margin: 15px 0;
+            color: #555;
         }
 
         .pdf-container {
-            margin: ٢٥px ٠;
-            border: ٣px solid #ec407a;
-            border-radius: ١٨px;
+            margin: 25px 0;
+            border: 3px solid #ec407a;
+            border-radius: 18px;
             overflow: hidden;
-            height: ٥٥vh;
-            min-height: ٣٨٠px;
-            box-shadow: ٠ ٨px ٢٠px rgba(236, 64, 122, 0.2);
+            height: 55vh;
+            min-height: 380px;
+            box-shadow: 0 8px 20px rgba(236, 64, 122, 0.2);
             background: white;
         }
 
         .pdf-container iframe {
-            width: ١٠٠%;
-            height: ١٠٠%;
+            width: 100%;
+            height: 100%;
             border: none;
         }
 
-        .heart-btn {
-            background: linear-gradient(١٣٥deg, #ff758c, #ff7eb3);
+        .btn {
+            background: #ec407a;
             color: white;
             border: none;
-            border-radius: ٥٠px;
-            padding: ١٥px ٣٥px;
-            font-size: ٢٠px;
+            border-radius: 50px;
+            padding: 15px 35px;
+            font-size: 20px;
             font-weight: bold;
             cursor: pointer;
-            margin: ١٥px;
-            box-shadow: ٠ ٨px ٢٠px rgba(255, 105, 180, 0.4);
-            transition: all ٠٫٣s;
+            margin: 15px;
+            box-shadow: 0 8px 20px rgba(236, 64, 122, 0.4);
+            transition: all 0.3s;
         }
 
-        .heart-btn:hover {
+        .btn:hover {
             transform: scale(1.08);
-            box-shadow: ٠ ١٢px ٣٠px rgba(255, 105, 180, 0.6);
+            box-shadow: 0 12px 30px rgba(236, 64, 122, 0.6);
         }
 
-        .heart-btn:active {
+        .btn:active {
             transform: scale(0.95);
         }
 
         .quote-container {
-            margin: ٢٥px ١٥px;
-            padding: ٢٠px;
+            margin: 25px 15px;
+            padding: 20px;
             background: rgba(255, 182, 193, 0.15);
-            border-radius: ١٥px;
-            min-height: ٩٠px;
+            border-radius: 15px;
+            min-height: 90px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: ١٨px;
+            font-size: 18px;
             color: #c2185b;
-            line-height: ١٫٦;
-            border: ١px dashed #ffb6c1;
+            line-height: 1.6;
+            border: 1px dashed #ffb6c1;
         }
 
         .note {
-            font-size: ١٧px;
-            color: #٧٧٧;
-            margin: ٢٠px ١٥px;
+            font-size: 17px;
+            color: #777;
+            margin: 20px 15px;
         }
 
-        @media (max-width: ٦٠٠px) {
-            .majd-name { font-size: ٤٠px; }
-            p { font-size: ١٨px; }
-            .pdf-container { height: ٦٠vh; min-height: ٣٥٠px; }
-            .quote-container { font-size: ١٦px; }
-            .heart-btn { padding: ١٣px ٣٠px; font-size: ١٩px; }
+        @media (max-width: 600px) {
+            .majd-name { font-size: 40px; }
+            p { font-size: 18px; }
+            .pdf-container { height: 60vh; min-height: 350px; }
+            .quote-container { font-size: 16px; }
+            .btn { padding: 13px 30px; font-size: 19px; }
         }
     </style>
 </head>
@@ -162,7 +162,7 @@
             <iframe src="lovebook.pdf"></iframe>
         </div>
 
-        <button class="heart-btn" onclick="showQuote()">
+        <button class="btn" onclick="showQuote()">
             كلمة من قلبي لك
         </button>
 
@@ -170,7 +170,7 @@
             اضغطي الزر لتري كلمة تهمس لك
         </div>
 
-        <a href="lovebook.pdf" download class="heart-btn">
+        <a href="lovebook.pdf" download class="btn">
             تحميل الكتاب 💝
         </a>
 
@@ -206,16 +206,16 @@
 
             setTimeout(() => {
                 name.style.transform = "scale(1)";
-            }, ٣٠٠);
+            }, 300);
 
-            for (let i = ٠; i < ٦; i++) {
+            for (let i = 0; i < 6; i++) {
                 const sparkle = document.createElement("div");
                 sparkle.className = "sparkle";
                 sparkle.innerText = "✨";
-                sparkle.style.left = Math.random() * ١٠٠ + "٪";
-                sparkle.style.top = Math.random() * ١٠٠ + "٪";
+                sparkle.style.left = Math.random() * 100 + "%";
+                sparkle.style.top = Math.random() * 100 + "%";
                 name.parentElement.appendChild(sparkle);
-                setTimeout(() => sparkle.remove(), ١٢٠٠);
+                setTimeout(() => sparkle.remove(), 1200);
             }
         }
     </script>
