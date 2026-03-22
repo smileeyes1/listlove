@@ -20,50 +20,49 @@
 
         .card {
             background: rgba(255, 255, 255, 0.94);
-            padding: ٣٠px ١٥px;
-            margin: ٢٠px ١٠px;
-            border-radius: ٢٥px;
-            box-shadow: ٠ ١٠px ٣٠px rgba(255, 105, 180, 0.2);
-            border: ٢px solid #ffb6c1;
+            padding: ٤٠px ٢٠px;
+            margin: ٣٠px ١٥px;
+            border-radius: ٣٠px;
+            box-shadow: ٠ ١٥px ٤٠px rgba(255, 105, 180, 0.25);
+            border: ٣px solid #ffb6c1;
         }
 
         .name-container {
-            margin: ٣٠px ٠ ١٥px;
+            margin: ٣٠px ٠;
             position: relative;
             display: inline-block;
         }
 
         .majd-name {
             color: #c2185b;
-            font-size: ٤٨px;
+            font-size: ٥٠px;
             font-family: "Reem Kufi", sans-serif;
             cursor: pointer;
             transition: all ٠٫٤s;
-            text-shadow: ٠ ٠ ١٥px rgba(194, 24, 91, 0.4);
+            text-shadow: ٠ ٠ ٢٠px rgba(194, 24, 91, 0.5);
         }
 
         .majd-name:hover,
         .majd-name:active {
-            transform: scale(1.08);
-            text-shadow: ٠ ٠ ٢٥px rgba(194, 24, 91, 0.7);
+            transform: scale(1.1);
+            text-shadow: ٠ ٠ ٣٠px rgba(194, 24, 91, 0.8);
         }
 
         .hint {
-            font-size: ١٦px;
+            font-size: ١٨px;
             color: #ec407a;
             opacity: ٠;
-            margin-top: ٥px;
+            margin-top: ٨px;
             transition: opacity ٠٫٣s;
         }
 
-        .name-container:hover .hint,
-        .name-container:active .hint {
+        .name-container:hover .hint {
             opacity: ١;
         }
 
         .sparkle {
             position: absolute;
-            font-size: ٣٥px;
+            font-size: ٤٠px;
             color: gold;
             opacity: ٠;
             pointer-events: none;
@@ -72,32 +71,15 @@
 
         @keyframes sparkleAnim {
             ٠٪ { opacity: ١; transform: translate(٠, ٠) scale(0.5); }
-            ٥٠٪ { opacity: ١; transform: translate(٢٥px, -٣٥px) scale(1.3); }
-            ١٠٠٪ { opacity: ٠; transform: translate(٥٠px, -٧٠px) scale(1.6); }
+            ٥٠٪ { opacity: ١; transform: translate(٣٠px, -٤٠px) scale(1.4); }
+            ١٠٠٪ { opacity: ٠; transform: translate(٦٠px, -٨٠px) scale(1.8); }
         }
 
         p {
-            font-size: ٢٠px;
+            font-size: ٢٢px;
             line-height: ١٫٨;
-            margin: ١٥px ٠;
+            margin: ٢٠px ٠;
             color: #٥٥٥;
-        }
-
-        .pdf-container {
-            margin: ٢٥px ٠;
-            border: ٣px solid #ec407a;
-            border-radius: ١٨px;
-            overflow: hidden;
-            height: ٥٥vh;
-            min-height: ٣٨٠px;
-            box-shadow: ٠ ٨px ٢٠px rgba(236, 64, 122, 0.2);
-            background: white;
-        }
-
-        .pdf-container iframe {
-            width: ١٠٠%;
-            height: ١٠٠%;
-            border: none;
         }
 
         .btn {
@@ -105,18 +87,20 @@
             color: white;
             border: none;
             border-radius: ٥٠px;
-            padding: ١٥px ٤٠px;
-            font-size: ٢٠px;
+            padding: ١٨px ٤٥px;
+            font-size: ٢٢px;
             font-weight: bold;
             cursor: pointer;
-            margin: ١٥px ١٠px;
-            box-shadow: ٠ ٨px ٢٠px rgba(255, 105, 180, 0.4);
+            margin: ٢٠px ١٠px;
+            box-shadow: ٠ ١٠px ٢٥px rgba(255, 105, 180, 0.4);
             transition: all ٠٫٣s;
+            display: inline-block;
+            text-decoration: none;
         }
 
         .btn:hover {
-            transform: scale(1.08);
-            box-shadow: ٠ ١٢px ٣٠px rgba(255, 105, 180, 0.6);
+            transform: scale(1.1);
+            box-shadow: ٠ ١٥px ٣٥px rgba(255, 105, 180, 0.6);
         }
 
         .btn:active {
@@ -124,26 +108,25 @@
         }
 
         .quote-container {
-            margin: ٢٥px ١٥px;
-            padding: ٢٠px;
-            background: rgba(255, 182, 193, 0.15);
-            border-radius: ١٥px;
-            min-height: ٩٠px;
+            margin: ٣٠px ١٥px;
+            padding: ٢٥px;
+            background: rgba(255, 182, 193, 0.2);
+            border-radius: ٢٠px;
+            min-height: ١٠٠px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: ١٨px;
+            font-size: ١٩px;
             color: #c2185b;
-            line-height: ١٫٦;
-            border: ١px dashed #ffb6c1;
+            line-height: ١٫٧;
+            border: ٢px dashed #ffb6c1;
         }
 
-        @media (max-width: ٦٠٠px) {
-            .majd-name { font-size: ٤٠px; }
-            p { font-size: ١٨px; }
-            .pdf-container { height: ٦٠vh; min-height: ٣٥٠px; }
-            .quote-container { font-size: ١٦px; }
-            .btn { padding: ١٣px ٣٥px; font-size: ١٩px; }
+        .note {
+            font-size: ١٨px;
+            color: #٧٧٧;
+            margin: ٢٥px ١٥px;
+            line-height: ١٫٦;
         }
     </style>
 </head>
@@ -162,12 +145,9 @@
             إلى زوجتي الغالية  
             أهديك كتاب لغات الحب الخمس  
             لأن فيه كثير من ما بيننا من مودة ورحمة  
-            تفضلي اقرئيه هنا واستمتعي بكل صفحة
+            حمليه وافتحيه بتطبيق القارئ على جوالك  
+            واستمتعي بكل صفحة معي في قلبك
         </p>
-
-        <div class="pdf-container">
-            <iframe src="lovebook.pdf"></iframe>
-        </div>
 
         <button class="btn" onclick="showQuote()">
             كلمة من قلبي لك
@@ -178,8 +158,13 @@
         </div>
 
         <a href="lovebook.pdf" download class="btn">
-            تحميل الكتاب 💝
+            حملي الكتاب دلوقتي 💝
         </a>
+
+        <div class="note">
+            بعد التحميل افتحي الملف بتطبيق القارئ  
+            هتلاقي الصفحات كاملة وتقدري تقلبيها براحتك
+        </div>
     </div>
 
     <script>
