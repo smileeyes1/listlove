@@ -28,7 +28,7 @@
         }
 
         .name-container {
-            margin: ٣٠px ٠ ٢٠px;
+            margin: ٣٠px ٠ ١٥px;
             position: relative;
             display: inline-block;
         }
@@ -40,8 +40,6 @@
             cursor: pointer;
             transition: all ٠٫٤s;
             text-shadow: ٠ ٠ ١٥px rgba(194, 24, 91, 0.4);
-            padding: ١٠px ٣٠px;
-            border-radius: ٢٥px;
         }
 
         .majd-name:hover,
@@ -58,7 +56,8 @@
             transition: opacity ٠٫٣s;
         }
 
-        .name-container:hover .hint {
+        .name-container:hover .hint,
+        .name-container:active .hint {
             opacity: ١;
         }
 
@@ -178,12 +177,6 @@
             اضغطي الزر لتري كلمة تهمس لك
         </div>
 
-        <button class="btn" onclick="showLoveMeter()">
-            مقياس الحب اليوم
-        </button>
-
-        <div class="quote-container" id="loveMeter" style="display:none;"></div>
-
         <a href="lovebook.pdf" download class="btn">
             تحميل الكتاب 💝
         </a>
@@ -226,22 +219,6 @@
                 name.parentElement.appendChild(sparkle);
                 setTimeout(() => sparkle.remove(), ١٢٠٠);
             }
-        }
-
-        function showLoveMeter() {
-            const score = Math.floor(Math.random() * ٤٠) + ٦٠;
-            let message = "حبكما اليوم " + score + " %";
-
-            if (score >= ٩٠) {
-                message += " ... قلبك ينبض بحبها بقوة جدا";
-            } else if (score >= ٨٠) {
-                message += " ... حب جميل ومتنامي بإذن الله";
-            } else {
-                message += " ... وغدا يكون أعلى بصبر وتفاهم";
-            }
-
-            document.getElementById("loveMeter").innerText = message;
-            document.getElementById("loveMeter").style.display = "flex";
         }
     </script>
 
