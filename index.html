@@ -44,9 +44,9 @@
             border-radius: ٢٠px;
         }
 
-        .majd-name:hover {
-            transform: scale(1.05);
-            text-shadow: ٠ ٠ ٢٠px rgba(194, 24, 91, 0.6);
+        .majd-name:active {
+            transform: scale(1.1);
+            text-shadow: ٠ ٠ ٢٠px rgba(194, 24, 91, 0.8);
         }
 
         .sparkle {
@@ -62,11 +62,6 @@
             ٠٪ { opacity: ١; transform: translate(٠, ٠) scale(0.5); }
             ٥٠٪ { opacity: ١; transform: translate(٢٠px, -٣٠px) scale(1.2); }
             ١٠٠٪ { opacity: ٠; transform: translate(٤٠px, -٦٠px) scale(1.5); }
-        }
-
-        h2 {
-            font-size: ٢٨px;
-            margin: ١٠px ٠;
         }
 
         p {
@@ -94,46 +89,34 @@
         }
 
         .heart-btn {
-            position: relative;
-            width: ١٤٠px;
-            height: ١٤٠px;
             background: linear-gradient(١٣٥deg, #ff758c, #ff7eb3);
             color: white;
             border: none;
-            border-radius: ٥٠٪ ٥٠٪ ٥٠٪ ٥٠٪ / ٦٠٪ ٦٠٪ ٤٠٪ ٤٠٪;
+            border-radius: ٥٠px;
+            padding: ١٥px ٣٥px;
             font-size: ٢٠px;
             font-weight: bold;
             cursor: pointer;
-            margin: ٢٠px auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: ١٠px;
-            box-shadow: ٠ ١٠px ٢٥px rgba(255, 105, 180, 0.4);
+            margin: ١٥px;
+            box-shadow: ٠ ٨px ٢٠px rgba(255, 105, 180, 0.4);
             transition: all ٠٫٣s;
         }
 
         .heart-btn:hover {
-            transform: scale(1.1);
-            box-shadow: ٠ ١٥px ٣٥px rgba(255, 105, 180, 0.6);
+            transform: scale(1.08);
+            box-shadow: ٠ ١٢px ٣٠px rgba(255, 105, 180, 0.6);
         }
 
         .heart-btn:active {
-            animation: pulse-btn ٠٫٤s;
-        }
-
-        @keyframes pulse-btn {
-            ٠٪, ١٠٠٪ { transform: scale(1); }
-            ٥٠٪ { transform: scale(1.15); }
+            transform: scale(0.95);
         }
 
         .quote-container {
-            margin: ٢٥px ٠;
+            margin: ٢٥px ١٥px;
             padding: ٢٠px;
             background: rgba(255, 182, 193, 0.15);
             border-radius: ١٥px;
-            min-height: ٨٠px;
+            min-height: ٩٠px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -146,16 +129,15 @@
         .note {
             font-size: ١٧px;
             color: #٧٧٧;
-            margin-top: ١٥px;
-            line-height: ١٫٥;
+            margin: ٢٠px ١٥px;
         }
 
         @media (max-width: ٦٠٠px) {
-            .majd-name { font-size: ٣٨px; }
-            h2 { font-size: ٢٤px; }
+            .majd-name { font-size: ٤٠px; }
             p { font-size: ١٨px; }
             .pdf-container { height: ٦٠vh; min-height: ٣٥٠px; }
-            .heart-btn { width: ١٢٠px; height: ١٢٠px; font-size: ١٨px; }
+            .quote-container { font-size: ١٦px; }
+            .heart-btn { padding: ١٣px ٣٠px; font-size: ١٩px; }
         }
     </style>
 </head>
@@ -185,16 +167,16 @@
         </button>
 
         <div class="quote-container" id="quote">
-            اضغطي القلب لتري كلمة تهمس لك
+            اضغطي الزر لتري كلمة تهمس لك
         </div>
 
-        <button class="heart-btn" onclick="window.location='lovebook.pdf';">
-            افتحي الكتاب 💝
-        </button>
+        <a href="lovebook.pdf" download class="heart-btn">
+            تحميل الكتاب 💝
+        </a>
 
         <div class="note">
             اضغطي على اسمي لتري بريقه  
-            واضغطي القلوب للمزيد من الدفء
+            واضغطي الازرار للمزيد من الدفء والكلمات الجميلة
         </div>
     </div>
 
@@ -219,22 +201,20 @@
 
         function sparkleName() {
             const name = document.getElementById("majd");
-            name.style.color = '#' + Math.floor(Math.random()*16777215).toString(16); // لون عشوائي دافئ
+            name.style.color = '#' + Math.floor(Math.random()*16777215).toString(16);
             name.style.transform = "scale(1.1)";
 
             setTimeout(() => {
                 name.style.transform = "scale(1)";
             }, ٣٠٠);
 
-            // اضافة بريق
-            for (let i = ٠; i < ٥; i++) {
+            for (let i = ٠; i < ٦; i++) {
                 const sparkle = document.createElement("div");
                 sparkle.className = "sparkle";
                 sparkle.innerText = "✨";
                 sparkle.style.left = Math.random() * ١٠٠ + "٪";
                 sparkle.style.top = Math.random() * ١٠٠ + "٪";
                 name.parentElement.appendChild(sparkle);
-
                 setTimeout(() => sparkle.remove(), ١٢٠٠);
             }
         }
