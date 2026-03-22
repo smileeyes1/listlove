@@ -63,6 +63,55 @@
             border: none;
         }
 
+        .heart-btn {
+            position: relative;
+            width: ١٤٠px;
+            height: ١٤٠px;
+            background: linear-gradient(١٣٥deg, #ff758c, #ff7eb3);
+            color: white;
+            border: none;
+            border-radius: ٥٠٪ ٥٠٪ ٥٠٪ ٥٠٪ / ٦٠٪ ٦٠٪ ٤٠٪ ٤٠٪;
+            font-size: ٢٠px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: ٢٠px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: ١٠px;
+            box-shadow: ٠ ١٠px ٢٥px rgba(255, 105, 180, 0.4);
+            transition: all ٠٫٣s;
+            overflow: hidden;
+        }
+
+        .heart-btn::before {
+            content: "❤️";
+            position: absolute;
+            font-size: ٦٠px;
+            opacity: ٠٫٢;
+            top: ٥٠٪;
+            left: ٥٠٪;
+            transform: translate(-٥٠٪, -٥٠٪);
+            z-index: ٠;
+        }
+
+        .heart-btn:hover {
+            transform: scale(1.1);
+            box-shadow: ٠ ١٥px ٣٥px rgba(255, 105, 180, 0.6);
+        }
+
+        .heart-btn:active {
+            transform: scale(0.95);
+            animation: pulse-btn ٠٫٤s;
+        }
+
+        @keyframes pulse-btn {
+            ٠٪ { transform: scale(1); }
+            ٥٠٪ { transform: scale(1.15); }
+            ١٠٠٪ { transform: scale(1); }
+        }
+
         .quote-container {
             margin: ٢٥px ٠;
             padding: ٢٠px;
@@ -78,41 +127,6 @@
             border: ١px dashed #ffb6c1;
         }
 
-        .quote-btn {
-            display: inline-block;
-            padding: ١٤px ٣٠px;
-            background: #ec407a;
-            color: white;
-            border: none;
-            border-radius: ٤٠px;
-            font-size: ٢٠px;
-            font-weight: bold;
-            cursor: pointer;
-            margin: ١٥px ٠;
-            box-shadow: ٠ ٦px ١٥px rgba(236, 64, 122, 0.3);
-        }
-
-        .quote-btn:hover {
-            background: #d81b60;
-        }
-
-        .download-btn {
-            display: inline-block;
-            padding: ١٦px ٣٥px;
-            background: #d81b60;
-            color: white;
-            border-radius: ٤٠px;
-            text-decoration: none;
-            font-size: ٢٢px;
-            font-weight: bold;
-            margin: ٢٠px ٠;
-            box-shadow: ٠ ٦px ١٥px rgba(216, 27, 96, 0.3);
-        }
-
-        .download-btn:hover {
-            background: #ad1457;
-        }
-
         .note {
             font-size: ١٧px;
             color: #٧٧٧;
@@ -126,7 +140,8 @@
             .heart { font-size: ٣٥px; }
             .pdf-container { height: ٦٠vh; min-height: ٣٥٠px; }
             .quote-container { font-size: ١٦px; padding: ١٥px; }
-            .quote-btn, .download-btn { font-size: ١٩px; padding: ١٣px ٢٨px; }
+            .heart-btn { width: ١٢٠px; height: ١٢٠px; font-size: ١٨px; }
+            .heart-btn::before { font-size: ٥٠px; }
         }
     </style>
 </head>
@@ -151,22 +166,21 @@
             <iframe src="lovebook.pdf"></iframe>
         </div>
 
-        <button class="quote-btn" onclick="showQuote()">
+        <button class="heart-btn" onclick="showQuote()">
             كلمة من قلبي لك
         </button>
 
         <div class="quote-container" id="quote">
-            اضغطي الزر لتري كلمة جميلة تهمس لك
+            اضغطي القلب لتري كلمة تهمس لك
         </div>
+
+        <button class="heart-btn" onclick="window.location='lovebook.pdf';">
+            افتحي الكتاب 💝
+        </button>
 
         <div class="note">
-            لو ما ظهر الكتاب داخل الإطار بشكل مريح  
-            اضغطي زر التحميل وافتحيه بتطبيق القارئ
+            او اضغطي على القلب الثاني لتحميل الكتاب مباشرة
         </div>
-
-        <a href="lovebook.pdf" download class="download-btn">
-            تحميل الكتاب 💝
-        </a>
     </div>
 
     <script>
