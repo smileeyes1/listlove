@@ -28,7 +28,7 @@
         }
 
         .name-container {
-            margin: ٢٥px ٠;
+            margin: ٣٠px ٠ ٢٠px;
             position: relative;
             display: inline-block;
         }
@@ -53,7 +53,7 @@
         .hint {
             font-size: ١٦px;
             color: #ec407a;
-            opacity: ٠٫٧;
+            opacity: ٠;
             margin-top: ٥px;
             transition: opacity ٠٫٣s;
         }
@@ -139,12 +139,6 @@
             border: ١px dashed #ffb6c1;
         }
 
-        .note {
-            font-size: ١٧px;
-            color: #٧٧٧;
-            margin: ٢٠px ١٥px;
-        }
-
         @media (max-width: ٦٠٠px) {
             .majd-name { font-size: ٤٠px; }
             p { font-size: ١٨px; }
@@ -188,7 +182,7 @@
             مقياس الحب اليوم
         </button>
 
-        <div class="quote-container" id="loveMeter" style="display:none; min-height:60px;"></div>
+        <div class="quote-container" id="loveMeter" style="display:none;"></div>
 
         <a href="lovebook.pdf" download class="btn">
             تحميل الكتاب 💝
@@ -235,15 +229,15 @@
         }
 
         function showLoveMeter() {
-            const score = Math.floor(Math.random() * ٤٠) + ٦٠; // من ٦٠ الى ١٠٠
-            let message = "";
+            const score = Math.floor(Math.random() * ٤٠) + ٦٠;
+            let message = "حبكما اليوم " + score + " %";
 
             if (score >= ٩٠) {
-                message = "حبكما اليوم في القمة! قلبك ينبض بحبها بقوة  " + score + " %";
+                message += " ... قلبك ينبض بحبها بقوة جدا";
             } else if (score >= ٨٠) {
-                message = "حب جميل جدا اليوم... " + score + " % من القلب لقلبها";
+                message += " ... حب جميل ومتنامي بإذن الله";
             } else {
-                message = "الحب موجود وينمو... اليوم " + score + " % وغدا أكثر بإذن الله";
+                message += " ... وغدا يكون أعلى بصبر وتفاهم";
             }
 
             document.getElementById("loveMeter").innerText = message;
