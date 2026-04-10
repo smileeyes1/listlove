@@ -1,224 +1,222 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>هدية إلى مجد</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sovereign AI</title>
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;600&family=Tajawal:wght@400;700&display=swap">
-
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
-            background: linear-gradient(to bottom, #fff0f5, #ffe4e9, #ffd1dc);
-            font-family: "Tajawal", sans-serif;
-            color: #444;
-            text-align: center;
-        }
-
-        .card {
-            background: rgba(255, 255, 255, 0.94);
-            padding: 30px 15px;
-            margin: 20px 10px;
-            border-radius: 25px;
-            box-shadow: 0 10px 30px rgba(255, 105, 180, 0.2);
-            border: 2px solid #ffb6c1;
-        }
-
-        .name-container {
-            margin: 20px 0;
-            position: relative;
-            display: inline-block;
-        }
-
-        .majd-name {
-            color: #c2185b;
-            font-size: 45px;
-            font-family: "Reem Kufi", sans-serif;
-            cursor: pointer;
-            transition: all 0.4s;
-            text-shadow: 0 0 10px rgba(194, 24, 91, 0.3);
-            padding: 10px 20px;
-            border-radius: 20px;
-        }
-
-        .majd-name:active {
-            transform: scale(1.1);
-            text-shadow: 0 0 20px rgba(194, 24, 91, 0.8);
-        }
-
-        .sparkle {
-            position: absolute;
-            font-size: 30px;
-            color: gold;
-            opacity: 0;
-            pointer-events: none;
-            animation: sparkleAnim 1.2s forwards;
-        }
-
-        @keyframes sparkleAnim {
-            0% { opacity: 1; transform: translate(0, 0) scale(0.5); }
-            50% { opacity: 1; transform: translate(20px, -30px) scale(1.2); }
-            100% { opacity: 0; transform: translate(40px, -60px) scale(1.5); }
-        }
-
-        p {
-            font-size: 20px;
-            line-height: 1.8;
-            margin: 15px 0;
-            color: #555;
-        }
-
-        .pdf-container {
-            margin: 25px 0;
-            border: 3px solid #ec407a;
-            border-radius: 18px;
-            overflow: hidden;
-            height: 55vh;
-            min-height: 380px;
-            box-shadow: 0 8px 20px rgba(236, 64, 122, 0.2);
-            background: white;
-        }
-
-        .pdf-container iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        .btn {
-            background: #ec407a;
-            color: white;
-            border: none;
-            border-radius: 50px;
-            padding: 15px 35px;
-            font-size: 20px;
-            font-weight: bold;
-            cursor: pointer;
-            margin: 15px;
-            box-shadow: 0 8px 20px rgba(236, 64, 122, 0.4);
-            transition: all 0.3s;
-        }
-
-        .btn:hover {
-            transform: scale(1.08);
-            box-shadow: 0 12px 30px rgba(236, 64, 122, 0.6);
-        }
-
-        .btn:active {
-            transform: scale(0.95);
-        }
-
-        .quote-container {
-            margin: 25px 15px;
-            padding: 20px;
-            background: rgba(255, 182, 193, 0.15);
-            border-radius: 15px;
-            min-height: 90px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-            color: #c2185b;
-            line-height: 1.6;
-            border: 1px dashed #ffb6c1;
-        }
-
-        .note {
-            font-size: 17px;
-            color: #777;
-            margin: 20px 15px;
-        }
-
-        @media (max-width: 600px) {
-            .majd-name { font-size: 40px; }
-            p { font-size: 18px; }
-            .pdf-container { height: 60vh; min-height: 350px; }
-            .quote-container { font-size: 16px; }
-            .btn { padding: 13px 30px; font-size: 19px; }
-        }
-    </style>
+<style>
+body{
+  font-family: Arial, sans-serif;
+  background:#0f172a;
+  color:#f8fafc;
+  margin:0;
+  padding:14px;
+}
+h1{color:#38bdf8;text-align:center;}
+textarea,input{
+  width:100%;
+  border-radius:8px;
+  border:none;
+  padding:10px;
+  margin-top:6px;
+  font-size:15px;
+}
+button{
+  width:100%;
+  margin-top:10px;
+  padding:12px;
+  font-size:16px;
+  background:#38bdf8;
+  border:none;
+  border-radius:8px;
+  color:#020617;
+}
+ul{list-style:none;padding:0;margin-top:12px;}
+li{
+  background:#1e293b;
+  margin-bottom:8px;
+  padding:10px;
+  border-radius:6px;
+}
+.settings{
+  margin-top:20px;
+  background:#020617;
+  padding:12px;
+  border-radius:10px;
+}
+.footer{
+  text-align:center;
+  margin-top:18px;
+  color:#94a3b8;
+  font-size:12px;
+}
+</style>
 </head>
 
 <body>
 
-    <div class="card">
-        <div class="name-container">
-            <h2 class="majd-name" id="majd" onclick="sparkleName()">
-                مجد
-            </h2>
-        </div>
+<h1>🧠 Sovereign AI</h1>
 
-        <p>
-            إلى زوجتي الغالية  
-            أهديك كتاب لغات الحب الخمس  
-            لأن فيه كثير من ما بيننا من مودة ورحمة  
-            تفضلي اقرئيه هنا واستمتعي بكل صفحة
-        </p>
+<textarea id="input" placeholder="اكتب أو تحدث باسمك"></textarea>
+<button onclick="run()">تنفيذ</button>
+<button onclick="startListening()">🎙️ تحدث الآن</button>
 
-        <div class="pdf-container">
-            <iframe src="lovebook.pdf"></iframe>
-        </div>
+<ul id="output"></ul>
 
-        <button class="btn" onclick="showQuote()">
-            كلمة من قلبي لك
-        </button>
+<div class="settings">
+<h3>⚙️ الإعدادات</h3>
 
-        <div class="quote-container" id="quote">
-            اضغطي الزر لتري كلمة تهمس لك
-        </div>
+<label><input type="checkbox" id="enableVoice" checked> تفعيل الصوت</label><br>
+<label><input type="checkbox" id="silentMode"> 🔕 صامت بالكامل</label><br>
+<label><input type="checkbox" id="smartDnd"> 🧠 عدم إزعاج ذكي</label><br>
+<label><input type="checkbox" id="autoSpeak" checked> التحدث تلقائياً</label><br>
+<label><input type="checkbox" id="notificationsEnabled"> 🔔 إشعارات</label><br>
 
-        <a href="lovebook.pdf" download class="btn">
-            تحميل الكتاب 💝
-        </a>
+<label>سرعة الصوت
+<input type="range" id="speechRate" min="0.7" max="1.2" step="0.05" value="0.95"></label>
 
-        <div class="note">
-            اضغطي على اسمي لتري بريقه  
-            واضغطي الازرار للمزيد من الدفء والكلمات الجميلة
-        </div>
-    </div>
+<label>طبقة الصوت
+<input type="range" id="speechPitch" min="0.8" max="1.2" step="0.05" value="1.0"></label>
 
-    <script>
-        const quotes = [
-            "الحب ليس أن تنظر بعضكما إلى بعض بل أن تنظرا معا في اتجاه واحد",
-            "أنت في قلبي كالروح في الجسد لا تستقر إلا بك",
-            "الزواج نصف الدين فاجعله نصف الجنة بحسن المعاشرة",
-            "من رزقه الله زوجة صالحة فقد أعانه على نصف دينه",
-            "أجمل ما في الحب أن يصبح الاثنان واحدا دون أن يفقد أحدهما نفسه",
-            "إذا أردت أن تعرف مقدار حبي لك فانظر إلى سعادتي حين أراك",
-            "الحب الحقيقي ينمو مع الزمن ويزداد جمالا بالصبر",
-            "أنت بيتي وأماني وسكينتي",
-            "ربنا هب لنا من أزواجنا وذرياتنا قرة أعين",
-            "كل يوم معك صفحة جديدة من قصة حب لا تنتهي"
-        ];
+<label>كلمة التأكيد
+<input type="text" id="wakeWord" value="يا مساعد"></label>
 
-        function showQuote() {
-            const randomIndex = Math.floor(Math.random() * quotes.length);
-            document.getElementById("quote").innerText = quotes[randomIndex];
-        }
+<hr>
 
-        function sparkleName() {
-            const name = document.getElementById("majd");
-            name.style.color = '#' + Math.floor(Math.random()*16777215).toString(16);
-            name.style.transform = "scale(1.1)";
+<h4>🎯 هدف اليوم</h4>
+<input type="text" id="dailyGoal" placeholder="اكتب هدفك اليومي هنا">
+<button onclick="saveGoal()">حفظ هدف اليوم</button>
 
-            setTimeout(() => {
-                name.style.transform = "scale(1)";
-            }, 300);
+</div>
 
-            for (let i = 0; i < 6; i++) {
-                const sparkle = document.createElement("div");
-                sparkle.className = "sparkle";
-                sparkle.innerText = "✨";
-                sparkle.style.left = Math.random() * 100 + "%";
-                sparkle.style.top = Math.random() * 100 + "%";
-                name.parentElement.appendChild(sparkle);
-                setTimeout(() => sparkle.remove(), 1200);
-            }
-        }
-    </script>
+<div class="footer">
+قرار واحد • تنفيذ • إغلاق
+</div>
+
+<script>
+let lastSpeakTime = 0;
+
+function detectIntent(t){
+  if(t.includes("حل")) return "SOLVE";
+  if(t.includes("خط")) return "PLAN";
+  return "EXECUTE";
+}
+
+function decide(text){
+  const goal = dailyGoal.value || "";
+  const i = detectIntent(text);
+  if(i==="PLAN") return [
+    "ضع هدف اليوم في الاعتبار: "+goal,
+    "اختر خطوة واحدة فقط",
+    "ابدأ التنفيذ فوراً",
+    "أغلق"
+  ];
+  if(i==="SOLVE") return [
+    "حدد المشكلة",
+    "سبب واحد فقط",
+    "إجراء مباشر",
+    "أغلق"
+  ];
+  return ["نفّذ الآن لتحقيق هدفك","أغلق"];
+}
+
+function smartDndActive(){
+  if(!smartDnd.checked) return false;
+  const h=new Date().getHours();
+  if(h>=22||h<=7) return true;
+  if(Date.now()-lastSpeakTime<5000) return true;
+  return false;
+}
+
+function speak(text){
+  if(silentMode.checked) return;
+  if(smartDndActive()) return;
+  if(!enableVoice.checked) return;
+
+  lastSpeakTime=Date.now();
+  let u=new SpeechSynthesisUtterance(text);
+  u.lang="ar";
+  u.rate=parseFloat(speechRate.value);
+  u.pitch=parseFloat(speechPitch.value);
+  speechSynthesis.cancel();
+  speechSynthesis.speak(u);
+}
+
+function notify(title,body){
+  if(!notificationsEnabled.checked) return;
+  if(silentMode.checked) return;
+  const opt=smartDnd.checked?{body,silent:true}:{body};
+  if(Notification.permission==="granted") new Notification(title,opt);
+}
+
+function run(textOverride){
+  const text=textOverride || input.value.trim();
+  if(!text) return;
+  const steps=decide(text);
+  output.innerHTML="";
+  steps.forEach(s=>{
+    let li=document.createElement("li");
+    li.textContent=s;
+    output.appendChild(li);
+  });
+  if(autoSpeak.checked) speak(steps.join(". "));
+}
+
+function startListening(){
+  if(silentMode.checked) return;
+  const r=new webkitSpeechRecognition();
+  r.lang="ar";
+  r.onresult=e=>{
+    const t=e.results[0][0].transcript;
+    if(t.startsWith(wakeWord.value)){
+      run(t.replace(wakeWord.value,"").trim());
+    }
+  };
+  r.start();
+}
+
+function saveGoal(){
+  localStorage.setItem("goal",dailyGoal.value);
+  notify("الهدف اليومي","تم حفظ هدف اليوم");
+}
+
+function saveSettings(){
+  localStorage.setItem("settings",JSON.stringify({
+    v:enableVoice.checked,
+    s:silentMode.checked,
+    d:smartDnd.checked,
+    a:autoSpeak.checked,
+    n:notificationsEnabled.checked,
+    r:speechRate.value,
+    p:speechPitch.value,
+    w:wakeWord.value
+  }));
+}
+
+function loadSettings(){
+  let s=JSON.parse(localStorage.getItem("settings"));
+  if(!s) return;
+  enableVoice.checked=s.v;
+  silentMode.checked=s.s;
+  smartDnd.checked=s.d;
+  autoSpeak.checked=s.a;
+  notificationsEnabled.checked=s.n;
+  speechRate.value=s.r;
+  speechPitch.value=s.p;
+  wakeWord.value=s.w;
+  dailyGoal.value=localStorage.getItem("goal")||"";
+}
+
+document.querySelectorAll("input").forEach(e=>{
+  e.onchange=saveSettings;
+});
+window.onload=()=>{
+  loadSettings();
+  if(Notification&&Notification.permission!=="granted")
+    Notification.requestPermission();
+};
+</script>
 
 </body>
 </html>
